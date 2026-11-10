@@ -1,0 +1,21 @@
+{
+  "name": "code-lab-learning-platform",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "services/web",
+    "api"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace services/web",
+    "build:web": "npm run build --workspace services/web",
+    "build:api": "npm run build --workspace api",
+    "build:all": "npm run build:api && npm run build:web",
+    "dev:web": "npm run dev --workspace services/web",
+    "dev:api": "npx vercel dev"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "typescript": "^5.7.2"
+  }
+}

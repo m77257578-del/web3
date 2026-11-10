@@ -1,0 +1,10 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Platform data is read/written through authenticated Vercel Functions using Admin SDK.
+    // Admin SDK bypasses these rules; browser clients have no direct collection access.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

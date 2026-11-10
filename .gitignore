@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+coverage/
+.firebase/
+.vercel/
+.env.local
+.env.*.local
+.cache/
+*.log
